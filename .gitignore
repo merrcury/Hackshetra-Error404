@@ -138,6 +138,7 @@ py-backend/*.json
 /server/firebasesdk.json
 /server/utils/firebase.js
 /server/utils/mail.js
+/server/db/helpers/info.js
 
 # dependencies
 /server/node_modules
