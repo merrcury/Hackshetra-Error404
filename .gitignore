@@ -161,4 +161,6 @@ py-backend/*.json
 /server/yarn-debug.log*
 /server/yarn-error.log*
 
+# added by Ketan Patel
+py-backend/FaceDetection/IMFDB
 
