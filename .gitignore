@@ -106,7 +106,7 @@ venv.bak/
 #Added By Himanshu Garg
 py-backend/*.json
 *.h5
-FaceData/
+py-backend/FaceData/
 
 
 # Added by Pawan Jain
