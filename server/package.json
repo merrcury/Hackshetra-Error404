@@ -4,16 +4,28 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/merrcury/Hackshetra-Error404.git"
   },
-  "author": "Taem-Error404",
+  "author": "Team-Error404",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/merrcury/Hackshetra-Error404/issues"
   },
-  "homepage": "https://github.com/merrcury/Hackshetra-Error404#readme"
+  "homepage": "https://github.com/merrcury/Hackshetra-Error404#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chalk": "^2.4.2",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.3.0",
+    "nodemon": "^1.19.2",
+    "shortid": "^2.2.15"
+  }
 }

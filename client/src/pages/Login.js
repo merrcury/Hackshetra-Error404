@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Container, Card, CardBody, CardText, CardImg} from 'reactstrap';
-import axios from 'axios'
+import axios from '../constants/axios'
 
 class Login extends Component {
 
