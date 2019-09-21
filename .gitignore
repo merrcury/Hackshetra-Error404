@@ -105,7 +105,7 @@ venv.bak/
 
 #Added By Himanshu Garg
 py-backend/*.json
-
+*.h5
 
 
 # Added by Pawan Jain
