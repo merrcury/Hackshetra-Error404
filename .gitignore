@@ -105,7 +105,7 @@ venv.bak/
 
 #Added By Himanshu Garg
 py-backend/*.json
-
+*.h5
 
 
 # Added by Pawan Jain
@@ -162,4 +162,6 @@ py-backend/*.json
 /server/yarn-debug.log*
 /server/yarn-error.log*
 
+# added by Ketan Patel
+py-backend/FaceDetection/IMFDB
 
