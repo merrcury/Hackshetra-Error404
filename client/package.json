@@ -1,0 +1,19 @@
+{
+  "name": "hackshetra-error404-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merrcury/Hackshetra-Error404.git"
+  },
+  "author": "Team-Error404",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/merrcury/Hackshetra-Error404/issues"
+  },
+  "homepage": "https://github.com/merrcury/Hackshetra-Error404#readme"
+}
