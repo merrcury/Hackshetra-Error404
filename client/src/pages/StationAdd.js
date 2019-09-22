@@ -22,6 +22,10 @@ export default class StationAdd extends Component {
     if(!this.state.email || !this.state.stationcode || !this.state.password){
       alert('Please fill all the required fields')
     }
+    else if(this.state.stationcode.length > 3 || this.state.stationcode.length < 3){
+      alert('Please fill 3 characters as station code')
+    }
+
     else{
       axios.post('addstation',
         this.state

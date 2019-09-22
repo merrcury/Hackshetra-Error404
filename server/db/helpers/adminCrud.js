@@ -12,7 +12,7 @@ const chalk=require('chalk');
 
 var db = Firebase.database();
 var usersRef = db.ref("users");
-var policeRef=db.ref("policestation");
+var policeRef = db.ref("policestation");
 
 const adminOperation={
 addadmin(object,res){

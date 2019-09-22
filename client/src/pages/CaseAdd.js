@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 import {Container, Row, Form, Label, Col,Button } from 'reactstrap'
 import axios from '../constants/axios.js'
+import Dropzone from 'react-dropzone'
+import { StyledDropZone } from 'react-drop-zone'
+import ReactCrop from 'react-image-crop'
+import 'react-image-crop/dist/ReactCrop.css';
+import 'react-drop-zone/dist/styles.css'
+ 
+
 export default class CaseAdd extends Component {
 
   state ={
@@ -16,7 +23,11 @@ export default class CaseAdd extends Component {
     stations: [],
     addStatus: false,
     addSuccess: false,
-    filledStatus: false
+    filledStatus: false,
+    imgSrc: '',
+    crop: {
+      aspect: 1/1
+  }
   }
   handleInputChange = (e) => {
     this.setState({
@@ -100,12 +111,36 @@ export default class CaseAdd extends Component {
 }
   handleUploadPhoto = (e) => {
     this.setState({
-      
       file: e.target.files[0]
     })  
   }
 
-  
+  handleDropImage = (files) => {
+   console.log(files[0])
+
+   const currentFile = files[0]
+    const myFileItemReader = new FileReader()
+    myFileItemReader.addEventListener("load", ()=>{
+        console.log(myFileItemReader.result)
+        this.setState({
+            imgSrc: myFileItemReader.result
+        })
+    }, false)
+
+    myFileItemReader.readAsDataURL(currentFile)
+}
+
+handleImageLoaded = (image) => {
+  console.log(image)
+}
+handleOnCropChange = (crop) => {
+  this.setState({crop:crop})
+}
+handleOnCropComplete = (crop, pixelCrop) =>{
+  console.log(crop, pixelCrop)
+  console.log('hello')
+}
+
   render() {
     
     return (
@@ -202,6 +237,7 @@ export default class CaseAdd extends Component {
           </Row>
           <br />
           <Row className="form-input">
+            <>
             <Col md="3">
             <Label for="file">Upload Photo<span style={{color: 'red'}}>&#42;</span></Label>
             </Col>
@@ -209,7 +245,29 @@ export default class CaseAdd extends Component {
             <input  type="file" name="file" id="file" onChange={(e) => this.handleUploadPhoto(e)} required/>
             <br />
            <span>Uploaded: {this.state.imageUploadProgress}% </span> 
+           {/* <br />
+          {this.state.imgSrc !== '' ? 
+            <div>
+                <ReactCrop 
+                  src={this.state.imgSrc} 
+                  crop={this.state.crop} 
+                  onImageLoaded={this.handleImageLoaded}
+                  onComplete = {this.handleOnCropComplete}
+                  onChange={this.handleOnCropChange}/>
+               
+             </div>: 
+          <Dropzone onDrop={files => this.handleDropImage(files)}>
+            {({getRootProps, getInputProps}) => (
+              <section style={{padding: '30px', border: '2px dotted black'}}>
+                <div {...getRootProps()}>
+                  <input {...getInputProps()} accept="image/*"/>
+                  <p>Drag 'n' drop some files here, or click to select files</p>
+                </div>
+              </section>
+            )}
+          </Dropzone>} */}
             </Col >
+            </>
           </Row>
           <br />
           <div style={{textAlign: 'center'}} >
