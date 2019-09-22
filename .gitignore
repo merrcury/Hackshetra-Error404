@@ -105,6 +105,7 @@ venv.bak/
 
 #Added By Himanshu Garg
 py-backend/*.json
+py-backend/FaceDetection/*.json
 *.h5
 py-backend/FaceData/
 
