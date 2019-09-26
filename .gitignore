@@ -108,7 +108,7 @@ py-backend/*.json
 py-backend/FaceDetection/*.json
 *.h5
 py-backend/FaceData/
-
+confg.py
 
 # Added by Pawan Jain
 # client
