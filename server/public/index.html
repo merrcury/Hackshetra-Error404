@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!--Bootsrap 4 CDN-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Police</title>
 </head>
 <body>
+    <div class="container">
     <form method="POST" action="/upload"> 
-        <input type="text" name="name" id="" placeholder="enter name">
-        <input type="text" name="stationcode" id="" placeholder="enter stationcode">
-        <input type="text" name="desc" id="" placeholder="enter desc">
-        <input type="file" name="file" id="">
-        <button type="submit" value="submit">submit</button>
+        <div class="form-group">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" name="name" placeholder="Enter your name">
+              </div>
+              <div class="form-group">
+                    <label for="inputcode">Station Code</label>
+                    <input type="text" class="form-control" name="stationcode" placeholder="Enter Station Code">
+                  </div>
+                  <div class="form-group">
+                        <label>Description</label>
+                        <input type="text" class="form-control" name="desc" placeholder="Enter Description">
+                      </div>
+         <input type="file" name="file" id=""><br><br>
+        <button class="btn btn-primary text-center" type="submit" value="submit">submit</button>
     </form>
+</div>
 </body>
 </html>
