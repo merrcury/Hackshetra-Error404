@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import {Link,Redirect} from 'react-router-dom'
 import axios from '../constants/axios';
 import Loading from '../components/Loader/Loading'
 import {Container, Button, Row,Label,Col, Input} from 'reactstrap'
@@ -160,6 +160,7 @@ export default class CasesList extends Component {
 					if(localStorage.getItem(i.id) !== undefined && seenCount !== localStorage.getItem(i.id)){
 						alert('There is a update in ' + i.id)	
 						localStorage.setItem(i.id, seenCount)
+						window.location.pathname = `/case/${localStorage.getItem('code')}/${i.id}`
 					}
 				}
 			})
