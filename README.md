@@ -1,5 +1,5 @@
 # Hackshetra-Error404
-
+[![HitCount](http://hits.dwyl.com/merrcury/merrcury/Hackshetra-Error404.svg)](http://hits.dwyl.com/merrcury/merrcury/Hackshetra-Error404)
 ## For Server
 #### Go to server directory and open in terminal 
 type 
